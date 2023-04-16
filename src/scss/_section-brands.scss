@@ -1,0 +1,93 @@
+section.brands{
+    padding: 15px;
+    background-color: #f8f8f8;
+    width: 100%;
+    height: 100%;
+    .brand{
+        width: 100%;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        padding: 15px;
+        margin-bottom: 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        
+        h5{
+            font-size: 18px;
+            margin: 5px;
+            cursor: pointer;
+            //min-width: 350px;
+        }
+        .brand-colors{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            flex-wrap: wrap;
+            button{
+                cursor: pointer;
+                transition: 0s;
+                margin: 5px;
+                border: 1px solid rgba(#000, 0.1);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+                width: 70px;
+                height: 40px;
+                background-color: var(--bg-color);
+                color: var(--text-color);
+                .icon{
+                    display: none;
+                    
+                    svg{
+                        font-size: 20px;
+                    }
+                }
+                span{
+                    //margin-left: 10px;
+                    display: none;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+                &:hover{
+                    .icon{
+                        display: inline-block;
+                    }
+                }
+                
+            }
+        }
+        &.selected{
+            box-shadow: 0 0 5px rgba(#000, 0.5);
+            .brand-colors{
+                button{
+                    flex: 1;
+                    min-width: 150px;
+                    .icon{
+                        margin-right: 10px;
+                    }
+                    span{
+                        display: inline-block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 1200px){
+    section.brands{
+        padding: 25px;
+        .brand{
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            h5{
+                min-width: 350px;
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.about-modal{
+    width: 90%;
+    max-width: 720px;
+    background-color: #fff;
+    box-shadow: 0 0 5px 0 rgba(#000, 0.3);
+    padding: 30px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    button{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+        svg{
+            font-size: 20px;
+        }
+    }
+    h3{
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    p{
+        margin-bottom: 15px;
+        line-height: 1.5;
+    }
+    &-overlay{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(#fff, 0.8);
+    }
+}
+
+@media only screen and (min-width: 992px){
+    .about-modal{
+        align-items: flex-start;
+        text-align: start;
+        h3{
+            font-size: 26px;
+        }
+        p{
+            font-size: 18px
+        }
+        button{
+            top: 20px;
+            right: 20px;
+            svg{
+                font-size: 28px;
+            }
+        }
+    }
+}
